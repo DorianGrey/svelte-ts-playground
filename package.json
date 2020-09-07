@@ -1,0 +1,55 @@
+{
+  "scripts": {
+    "start": "snowpack dev",
+    "build": "snowpack build",
+    "test": "jest",
+    "test:ci": "jest --no-cache --coverage",
+    "lint": "eslint \"src/**/*.ts\"",
+    "format": "prettier --write --plugin-search-dir=. \"src/**/*.{ts,svelte}\"",
+    "check": "svelte-check"
+  },
+  "dependencies": {
+    "jest-junit": "^11.1.0",
+    "svelte": "^3.24.0",
+    "tailwindcss": "^1.8.4"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.11.5",
+    "@babel/preset-typescript": "^7.10.4",
+    "@snowpack/app-scripts-svelte": "^1.8.4",
+    "@snowpack/plugin-run-script": "^2.1.1",
+    "@testing-library/jest-dom": "^5.5.0",
+    "@testing-library/svelte": "^3.0.0",
+    "@tsconfig/svelte": "^1.0.3",
+    "@types/jest": "^26.0.4",
+    "@types/snowpack-env": "^2.3.0",
+    "@typescript-eslint/eslint-plugin": "^4.1.0",
+    "@typescript-eslint/parser": "^4.1.0",
+    "eslint": "^7.8.1",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-import": "^2.22.0",
+    "husky": "^4.3.0",
+    "jest": "^26.2.2",
+    "lint-staged": "^10.3.0",
+    "prettier": "^2.1.1",
+    "prettier-plugin-svelte": "^1.2.1",
+    "snowpack": "^2.10.0",
+    "svelte-check": "^1.0.0",
+    "svelte-preprocess": "^4.0.8",
+    "typescript": "^3.9.7"
+  },
+  "engines": {
+    "node": ">=12",
+    "npm": ">=5.10",
+    "pnpm": ">=5.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pnpm check && lint-staged",
+      "pre-push": "pnpm run test:ci"
+    }
+  },
+  "jest-junit": {
+    "outputDirectory": "./test-results/junit/"
+  }
+}

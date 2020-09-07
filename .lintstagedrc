@@ -1,0 +1,8 @@
+{
+    "src/**/*.ts": [
+      "eslint --fix"
+    ],
+    "src/**/*.{ts,svelte}": [
+      "prettier --write --plugin-search-dir=."
+    ]
+  }
