@@ -24,6 +24,7 @@ devDependencies:
   prettier-plugin-svelte: 1.2.1_prettier@2.1.1+svelte@3.24.1
   snowpack: 2.10.1
   svelte-check: 1.0.37
+  svelte-jester: 1.1.5_svelte@3.24.1
   svelte-preprocess: 4.2.1_svelte@3.24.1+typescript@3.9.7
   typescript: 3.9.7
 lockfileVersion: 5.1
@@ -7465,6 +7466,17 @@ packages:
     hasBin: true
     resolution:
       integrity: sha512-ek7aBVZqZki3PRCWMF/2WW5GV6nf7Ot2BUhzYnm1v9dtf2e/8h4b5OvbOW1nUrcRs4d3ZBDcbExe5XkQW6DfXw==
+  /svelte-jester/1.1.5_svelte@3.24.1:
+    dependencies:
+      cosmiconfig: 6.0.0
+      svelte: 3.24.1
+    dev: true
+    engines:
+      node: '>= 8'
+    peerDependencies:
+      svelte: '>= 3'
+    resolution:
+      integrity: sha512-evidPi5i8u9+rBavsvuU7OrMwsXHQd0sCpdF8XlGW6bPuijBW2A5q+bXkiEYh1xaQlDXGuikkopOLrVJYS4pug==
   /svelte-language-server/0.10.116:
     dependencies:
       chokidar: 3.4.2
@@ -8207,6 +8219,7 @@ specifiers:
   snowpack: ^2.10.0
   svelte: ^3.24.0
   svelte-check: ^1.0.0
+  svelte-jester: ^1.1.5
   svelte-preprocess: ^4.0.8
   tailwindcss: ^1.8.4
   typescript: ^3.9.7

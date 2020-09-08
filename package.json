@@ -35,6 +35,7 @@
     "prettier-plugin-svelte": "^1.2.1",
     "snowpack": "^2.10.0",
     "svelte-check": "^1.0.0",
+    "svelte-jester": "^1.1.5",
     "svelte-preprocess": "^4.0.8",
     "typescript": "^3.9.7"
   },
@@ -45,8 +46,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "pnpm check && lint-staged",
-      "pre-push": "pnpm run test:ci"
+      "pre-commit": "pnpm check && lint-staged"
     }
   },
   "jest-junit": {
