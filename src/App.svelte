@@ -1,48 +1,61 @@
 <script lang="ts">
   import "./TailwindSetup.svelte";
+  import router from "page";
 
-  let message: string = "Learn Svelte with Typescript";
+  import Home from "./Home.svelte";
+  import About from "./About.svelte";
+  import NotFound from "./404.svelte";
+
+  let page: typeof NotFound = Home;
+
+  router("/", () => (page = Home));
+  router("/about", () => (page = About));
+  router("*", () => (page = NotFound));
+  router.start();
 </script>
 
 <style>
+  :root {
+    --header-height: 64px;
+  }
+
   :global(body) {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
   }
 
-  .App-header {
-    background-color: #f9f6f6;
-    color: #333;
-    font-size: calc(10px + 2vmin);
+  .header {
+    height: var(--header-height);
+    width: 100%;
   }
-  .App-link {
-    color: #ff3e00;
+
+  .main {
+    padding-top: var(--header-height);
   }
+
   .App-logo {
-    height: 40vmin;
+    height: calc(var(--header-height) / 2);
     animation: App-logo-spin infinite 1.6s ease-in-out alternate;
   }
+
   @keyframes App-logo-spin {
     from {
       transform: scale(1);
     }
     to {
-      transform: scale(1.06);
+      transform: scale(1.2);
     }
   }
 </style>
 
-<div class="text-center">
-  <header
-    class="App-header min-h-screen flex flex-col justify-center items-center">
-    <img src="/logo.svg" class="App-logo pointer-events-none mb-4" alt="logo" />
-    <p>Edit <code>src/App.svelte</code> and save to reload.</p>
-    <a
-      class="App-link text-orange-500"
-      href="https://svelte.dev"
-      target="_blank"
-      rel="noopener noreferrer">
-      {message}
-    </a>
-  </header>
-</div>
+<header class="header fixed bg-gray-800 flex items-center px-4">
+  <img src="/logo.svg" class="App-logo pointer-events-none" alt="logo" />
+  <nav>
+    <a class="text-gray-100 px-4" href="/">Home</a>
+    <a class="text-gray-100 px-4" href="/about">About</a>
+    <a class="text-gray-100 px-4" href="/nowhere">Nowhere</a>
+  </nav>
+</header>
+<main class="main min-h-screen flex flex-col justify-center items-center">
+  <svelte:component this={page} />
+</main>
