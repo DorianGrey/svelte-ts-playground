@@ -1,5 +1,11 @@
+# Build output
 .build
 build
 web_modules
+
+# Dependencies
 node_modules
+
+# Test output
 test-results
+__snapshots__

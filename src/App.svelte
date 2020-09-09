@@ -1,27 +1,15 @@
 <script lang="ts">
   import "./TailwindSetup.svelte";
-  import router from "page";
 
-  import Home from "./Home.svelte";
+  import { Home } from "./home";
   import About from "./About.svelte";
-  import NotFound from "./404.svelte";
-
-  let page: typeof NotFound = Home;
-
-  router("/", () => (page = Home));
-  router("/about", () => (page = About));
-  router("*", () => (page = NotFound));
-  router.start();
+  import { NotFound, Route, Router } from "./routing";
+  import { Profile } from "./profile";
 </script>
 
 <style>
   :root {
     --header-height: 64px;
-  }
-
-  :global(body) {
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
   }
 
   .header {
@@ -52,10 +40,16 @@
   <img src="/logo.svg" class="App-logo pointer-events-none" alt="logo" />
   <nav>
     <a class="text-gray-100 px-4" href="/">Home</a>
-    <a class="text-gray-100 px-4" href="/about">About</a>
+    <a class="text-gray-100 px-4" href="/profile/42">Profile of "The Answer"</a>
+    <a class="text-gray-100 px-4" href="/about?format=plain">About</a>
     <a class="text-gray-100 px-4" href="/nowhere">Nowhere</a>
   </nav>
 </header>
 <main class="main min-h-screen flex flex-col justify-center items-center">
-  <svelte:component this={page} />
+  <Router>
+    <Route path="/" component={Home} />
+    <Route path="/profile/:id" component={Profile} />
+    <Route path="/about" component={About} />
+    <Route path="*" component={NotFound} />
+  </Router>
 </main>
