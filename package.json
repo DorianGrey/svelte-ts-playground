@@ -46,7 +46,8 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "pnpm check && lint-staged"
+      "pre-commit": "pnpm check && lint-staged",
+      "pre-push": "pnpm test:ci"
     }
   },
   "jest-junit": {

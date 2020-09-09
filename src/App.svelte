@@ -2,8 +2,6 @@
   import "./TailwindSetup.svelte";
 
   let message: string = "Learn Svelte with Typescript";
-
-  const test = (param: string) => console.warn("tapped");
 </script>
 
 <style>
