@@ -6,7 +6,8 @@
     "test:ci": "jest --no-cache --coverage",
     "lint": "eslint \"src/**/*.ts\"",
     "format": "prettier --write --plugin-search-dir=. \"src/**/*.{ts,svelte}\"",
-    "check": "svelte-check"
+    "check": "svelte-check",
+    "serve": "sirv build -s -G -B -e"
   },
   "dependencies": {
     "jest-junit": "^11.1.0",
@@ -35,6 +36,7 @@
     "lint-staged": "^10.3.0",
     "prettier": "^2.1.1",
     "prettier-plugin-svelte": "^1.2.1",
+    "sirv-cli": "^1.0.6",
     "snowpack": "^2.10.0",
     "svelte-check": "^1.0.0",
     "svelte-jester": "^1.1.5",
