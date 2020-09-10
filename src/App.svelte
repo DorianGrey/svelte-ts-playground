@@ -5,6 +5,7 @@
   import About from "./About.svelte";
   import { NotFound, Route, Router } from "./routing";
   import { Profile } from "./profile";
+  import Redirect from "./routing/Redirect.svelte";
 </script>
 
 <style>
@@ -39,7 +40,7 @@
 <header class="header fixed bg-gray-800 flex items-center px-4">
   <img src="/logo.svg" class="App-logo pointer-events-none" alt="logo" />
   <nav>
-    <a class="text-gray-100 px-4" href="/">Home</a>
+    <a class="text-gray-100 px-4" href="/home">Home</a>
     <a class="text-gray-100 px-4" href="/profile/42">Profile of "The Answer"</a>
     <a class="text-gray-100 px-4" href="/about?format=plain">About</a>
     <a class="text-gray-100 px-4" href="/nowhere">Nowhere</a>
@@ -47,7 +48,8 @@
 </header>
 <main class="main min-h-screen flex flex-col justify-center items-center">
   <Router>
-    <Route path="/" component={Home} />
+    <Redirect path="/" to="/home" />
+    <Route path="/home" component={Home} />
     <Route path="/profile/:id" component={Profile} />
     <Route path="/about" component={About} />
     <Route path="*" component={NotFound} />

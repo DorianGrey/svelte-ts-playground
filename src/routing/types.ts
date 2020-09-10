@@ -1,3 +1,8 @@
+export interface RedirectInfo {
+  path: string;
+  to: string;
+}
+
 export interface RouteInfo {
   path: string;
   component: any;
