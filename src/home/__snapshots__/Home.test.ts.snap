@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home screen should render learn svelte link 1`] = `
+<body>
+  <div>
+    <p>
+      Edit 
+      <code>
+        src/App.svelte
+      </code>
+       and save to reload.
+    </p>
+     
+    <a
+      class="App-link text-orange-500 svelte-yd0x14"
+      href="https://svelte.dev"
+      rel="noopener noreferrer"
+      target="_blank"
+    >
+      Learn Svelte with Typescript
+    </a>
+  </div>
+</body>
+`;

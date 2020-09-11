@@ -35,7 +35,7 @@ Error: ';' expected. (js)
       not have evolved by chance. It proves you exist, and so therefore, by your
       own arguments, you don’t. QED.’
     </p>
-    <p>
+    <p id="oh-dear-text">
       ’Oh dear,’ says Page, ’I hadn’t thought of that,’ and promptly disappears
       in a puff of logic.
     </p>

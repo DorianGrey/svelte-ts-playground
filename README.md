@@ -2,6 +2,19 @@
 
 Just a playground app tot figure out how good Svelte works in conjunction with TypeScript already...
 
+# Tasks
+
+* `start` start the development server.
+* `build` creates a non-bundled production build.
+* `test` starts unit tests via `jest` in watch mode.
+* `test:ci` executes all unit tests in CI mode, i.e. without cache and including coverage.
+* `e2e` executes all E2E tests. Note that this requires the development server to be available as well, i.e. use the `start` task in a different terminal tab.
+* `lint` lints all `typescript` files in the project, including test files. Note that `.svelte` files are not linted for now, see the following section for details.
+* `format` formats all source code (including tests) in the project. 
+* `check` executes `svelte-check`.
+* `serve` serves a production build for further preview.
+
+
 # Known issues / problems / glitches
 
 Note: The list below might not (yet) be exhaustive, it is mostly a list of already spotted aspects.
