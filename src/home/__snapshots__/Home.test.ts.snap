@@ -5,12 +5,12 @@ exports[`Home screen should render learn svelte link 1`] = `
   <div>
     <p>
       Edit
-       
+       
       <code>
         src/App.svelte
       </code>
-       
-      and save to reload
+       
+      and save to reload.
     </p>
      
     <a
