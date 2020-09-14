@@ -1,0 +1,16 @@
+{
+  "nav": {
+    "home": "Startseite",
+    "about": "Über uns",
+    "nowhere": "Nirgends",
+    "profile-answer": "Profil \"Der Antwort\""
+  },
+  "home": {
+      "edit": "Editiere",
+      "save": "und speichere zum neu laden.",
+      "message": "Lerne Svelte in Verbindung mit TypeScript"
+  },
+  "profile": {
+      "message": "Das Profil von Benutzer {id}"
+  }
+}

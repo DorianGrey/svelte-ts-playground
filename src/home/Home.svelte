@@ -1,5 +1,5 @@
 <script>
-  let message: string = "Learn Svelte with Typescript";
+  import { _ } from "svelte-i18n";
 </script>
 
 <style>
@@ -8,11 +8,15 @@
   }
 </style>
 
-<p>Edit <code>src/App.svelte</code> and save to reload.</p>
+<!-- 
+  TODO: ICU regularly supports formatting messages containing HTML in a special way, 
+  try to figure out how this works here. 
+-->
+<p>{$_('home.edit')} <code>src/App.svelte</code> {$_('home.save')}</p>
 <a
   class="App-link text-orange-500"
   href="https://svelte.dev"
   target="_blank"
   rel="noopener noreferrer">
-  {message}
+  {$_('home.message')}
 </a>

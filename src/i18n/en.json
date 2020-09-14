@@ -1,0 +1,16 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "nowhere": "Nowhere",
+    "profile-answer": "Profile of \"The Answer\""
+  },
+  "home": {
+    "edit": "Edit",
+    "save": "and save to reload.",
+    "message": "Learn Svelte with Typescript"
+  },
+  "profile": {
+    "message": "The profile page of user {id}"
+  }
+}

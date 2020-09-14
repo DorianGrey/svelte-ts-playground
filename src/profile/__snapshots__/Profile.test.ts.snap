@@ -4,8 +4,7 @@ exports[`Profile screen should render profile for no specific user 1`] = `
 <body>
   <div>
     <div>
-      The profile page of user 
-      &lt;unknown&gt;
+      The profile page of user &lt;unknown&gt;
     </div>
   </div>
 </body>
@@ -15,8 +14,7 @@ exports[`Profile screen should render profile for user with id 47 1`] = `
 <body>
   <div>
     <div>
-      The profile page of user 
-      47
+      The profile page of user 47
     </div>
   </div>
 </body>

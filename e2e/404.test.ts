@@ -9,9 +9,12 @@ describe("404/Not Found", () => {
       "h4",
       "404 | Well, That about Wraps It Up for This Page"
     );
+    // Note: This is a bit awkward - the line break has to be included,
+    // otherwise, the text cannot be found. ?!
     await expect(page).toHaveText(
       "#oh-dear-text",
-      "and promptly disappears in a puff of logic"
+      `and promptly disappears
+      in a puff of logic.`
     );
   });
 });

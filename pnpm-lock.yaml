@@ -2,6 +2,7 @@ dependencies:
   jest-junit: 11.1.0
   page: 1.11.6
   svelte: 3.24.1
+  svelte-i18n: 3.0.4_svelte@3.24.1
   tailwindcss: 1.8.4
 devDependencies:
   '@babel/preset-env': 7.11.5
@@ -1709,6 +1710,17 @@ packages:
       node: ^10.12.0 || >=12.0.0
     resolution:
       integrity: sha512-4YVwPkANLeNtRjMekzux1ci8hIaH5eGKktGqR0d3LWsKNn5B2X/1Z6Trxy7jQXl9EBGE6Yj02O+t09FMeRllaA==
+  /@formatjs/intl-unified-numberformat/3.3.7:
+    dependencies:
+      '@formatjs/intl-utils': 2.3.0
+    deprecated: We have renamed the package to @formatjs/intl-numberformat
+    dev: false
+    resolution:
+      integrity: sha512-KnWgLRHzCAgT9eyt3OS34RHoyD7dPDYhRcuKn+/6Kv2knDF8Im43J6vlSW6Hm1w63fNq3ZIT1cFk7RuVO3Psag==
+  /@formatjs/intl-utils/2.3.0:
+    dev: false
+    resolution:
+      integrity: sha512-KWk80UPIzPmUg+P0rKh6TqspRw0G6eux1PuJr+zz47ftMaZ9QDwbGzHZbtzWkl5hgayM/qrKRutllRC7D/vVXQ==
   /@fullhuman/postcss-purgecss/2.3.0:
     dependencies:
       postcss: 7.0.32
@@ -3244,6 +3256,12 @@ packages:
     dev: true
     resolution:
       integrity: sha512-Gar0ASD4BDyKC4hl4DwHqDrmvjoxWKZigVnAbn5H1owvm4CxCPdb0HQDehwNYMJpla5+M2tPmPARzhtYuwpHow==
+  /commander/4.1.1:
+    dev: false
+    engines:
+      node: '>= 6'
+    resolution:
+      integrity: sha512-NOKm8xhkzAjzFx8B2v5OAHT+u5pRQc2UCa2Vq9jYL/31o2wi9mxBA7LIFs3sV5VSC49z6pEhfbMULvShKj26WA==
   /commander/5.1.0:
     dev: false
     engines:
@@ -3959,6 +3977,10 @@ packages:
     dev: true
     resolution:
       integrity: sha512-SqmZANLWS0mnatqbSfRP5g8OXZC12Fgg1IwNtLsyHDzJizORW4khDfjPqJZsemPWBB2uqykUah5YpQ6epsqC/w==
+  /estree-walker/0.9.0:
+    dev: false
+    resolution:
+      integrity: sha512-12U47o7XHUX329+x3FzNVjCx3SHEzMF0nkDv7r/HnBzX/xNTKxajBk6gyygaxrAFtLj39219oMfbtxv4KpaOiA==
   /estree-walker/1.0.1:
     dev: true
     resolution:
@@ -4493,6 +4515,10 @@ packages:
       node: '>=8'
     resolution:
       integrity: sha512-BWICuzzDvDoH54NHKCseDanAhE3CeDorgDL5MT6LMXXj2WCnd9UC2szdk4AWLfjdgNBCXLUanXYcpBBKOSWGwg==
+  /globalyzer/0.1.4:
+    dev: false
+    resolution:
+      integrity: sha512-LeguVWaxgHN0MNbWC6YljNMzHkrCny9fzjmEUdnF1kQ7wATFD1RHFRqA1qxaX2tgxGENlcxjOflopBwj3YZiXA==
   /globby/11.0.1:
     dependencies:
       array-union: 2.1.0
@@ -4506,6 +4532,10 @@ packages:
       node: '>=10'
     resolution:
       integrity: sha512-iH9RmgwCmUJHi2z5o2l3eTtGBtXek1OYlHrbcxOYugyHLmAsZrPj43OtHThd62Buh/Vv6VyCBD2bdyWcGNQqoQ==
+  /globrex/0.1.2:
+    dev: false
+    resolution:
+      integrity: sha512-uHJgbwAMwNFf5mLst7IWLNg14x1CkeqglJb/K3doi4dw6q2IvAAmM/Y81kevy83wP+Sst+nutFTYOGg3d1lsxg==
   /got/11.6.0:
     dependencies:
       '@sindresorhus/is': 3.1.2
@@ -4804,6 +4834,23 @@ packages:
     dev: true
     resolution:
       integrity: sha512-RZY5huIKCMRWDUqZlEi72f/lmXKMvuszcMBduliQ3nnWbx9X/ZBQO7DijMEYS9EhHBb2qacRUMtC7svLwe0lcw==
+  /intl-format-cache/4.3.1:
+    dev: false
+    resolution:
+      integrity: sha512-OEUYNA7D06agqPOYhbTkl0T8HA3QKSuwWh1HiClEnpd9vw7N+3XsQt5iZ0GUEchp5CW1fQk/tary+NsbF3yQ1Q==
+  /intl-messageformat-parser/3.6.4:
+    dependencies:
+      '@formatjs/intl-unified-numberformat': 3.3.7
+    dev: false
+    resolution:
+      integrity: sha512-RgPGwue0mJtoX2Ax8EmMzJzttxjnva7gx0Q7mKJ4oALrTZvtmCeAw5Msz2PcjW4dtCh/h7vN/8GJCxZO1uv+OA==
+  /intl-messageformat/7.8.4:
+    dependencies:
+      intl-format-cache: 4.3.1
+      intl-messageformat-parser: 3.6.4
+    dev: false
+    resolution:
+      integrity: sha512-yS0cLESCKCYjseCOGXuV4pxJm/buTfyCJ1nzQjryHmSehlptbZbn9fnlk1I9peLopZGGbjj46yHHiTAEZ1qOTA==
   /invariant/2.2.4:
     dependencies:
       loose-envify: 1.4.0
@@ -8086,6 +8133,21 @@ packages:
     hasBin: true
     resolution:
       integrity: sha512-ek7aBVZqZki3PRCWMF/2WW5GV6nf7Ot2BUhzYnm1v9dtf2e/8h4b5OvbOW1nUrcRs4d3ZBDcbExe5XkQW6DfXw==
+  /svelte-i18n/3.0.4_svelte@3.24.1:
+    dependencies:
+      commander: 4.1.1
+      estree-walker: 0.9.0
+      intl-messageformat: 7.8.4
+      svelte: 3.24.1
+      tiny-glob: 0.2.6
+    dev: false
+    engines:
+      node: '>= 11.15.0'
+    hasBin: true
+    peerDependencies:
+      svelte: ^3.14.1
+    resolution:
+      integrity: sha512-qgRVjVmQ35wJtn0O6y0zpKo+Jagd8BTMUm5+to6yzIDAkzHPoINu0KUgJlff4QzXRcHsYodnj9qzKIZMtCfqfw==
   /svelte-jester/1.1.5_svelte@3.24.1:
     dependencies:
       cosmiconfig: 6.0.0
@@ -8275,6 +8337,13 @@ packages:
     dev: true
     resolution:
       integrity: sha1-DdTJ/6q8NXlgsbckEV1+Doai4fU=
+  /tiny-glob/0.2.6:
+    dependencies:
+      globalyzer: 0.1.4
+      globrex: 0.1.2
+    dev: false
+    resolution:
+      integrity: sha512-A7ewMqPu1B5PWwC3m7KVgAu96Ch5LA0w4SnEN/LbDREj/gAD0nPWboRbn8YoP9ISZXqeNAlMvKSKoEuhcfK3Pw==
   /tinydate/1.3.0:
     dev: true
     engines:
@@ -8898,6 +8967,7 @@ specifiers:
   snowpack: ^2.10.0
   svelte: ^3.24.0
   svelte-check: ^1.0.0
+  svelte-i18n: ^3.0.4
   svelte-jester: ^1.1.5
   svelte-preprocess: ^4.0.8
   tailwindcss: ^1.8.4
