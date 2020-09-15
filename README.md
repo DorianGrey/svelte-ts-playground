@@ -1,11 +1,14 @@
 # Svelte TS playground
 
-Just a playground app tot figure out how good Svelte works in conjunction with TypeScript already...
+Just a playground app to figure out how good Svelte works in conjunction with TypeScript already...
+
+This branch uses [snowpack](https://github.com/pikapkg/snowpack/) and its [default plugin](https://github.com/pikapkg/snowpack/blob/master/plugins/plugin-svelte) for `svelte`.
 
 # Tasks
 
 * `start` start the development server.
 * `build` creates a non-bundled production build.
+* `build:bundled` creates a bundled production build.
 * `test` starts unit tests via `jest` in watch mode.
 * `test:ci` executes all unit tests in CI mode, i.e. without cache and including coverage.
 * `e2e` executes all E2E tests. Note that this requires the development server to be available as well, i.e. use the `start` task in a different terminal tab.
@@ -25,12 +28,6 @@ Note: The list below might not (yet) be exhaustive, it is mostly a list of alrea
 
 - Testing does not work as usually expected atm. due to the way `tailwindcss` has to be imported to not get removed automatically. To get this working, it was required to mock the `TailwindSetup.svelte` file. Related issue for `svelte-jester`: https://github.com/mihar-22/svelte-jester/issues/20<br>
   Note that `jest-transform-svelte` did not work either with or without importing the `tailwindcss` setup.
-
-- The type checker executed by the `svelte` plugin for VSCode raises a curious complaint about the code in `Route.svelte`:
-  ```
-  'render' implicitly has return type 'any' because it does not have a return type annotation and is referenced directly or indirectly in one of its return expressions.ts(7023)
-  ```
-  It is entirely unclear what causes this. Not exporting the `component` property removes this complaint, however this is absolutely not intended.
 
 - Coverage reports are still a bit inaccurate. E.g. for the `Profile` component, the coverage report states:
   ```
