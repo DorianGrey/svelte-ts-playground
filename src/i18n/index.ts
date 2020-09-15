@@ -15,3 +15,6 @@ export function setup(): void {
     initialLocale: getLocaleFromNavigator(),
   });
 }
+
+// TODO: An HMR is not handled properly here, i.e. changing messages does not seem to
+// cause a re-render.

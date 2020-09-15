@@ -6,6 +6,6 @@ module.exports = {
   ],
   transform: {
     "^.+\\.(js|ts)$":
-      "<rootDir>/node_modules/@snowpack/app-scripts-svelte/jest/babelTransform.js",
+      "<rootDir>/config/babelTransform.js",
   },
 };

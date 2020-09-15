@@ -2,13 +2,12 @@
 
 Just a playground app to figure out how good Svelte works in conjunction with TypeScript already...
 
-This branch uses [snowpack](https://github.com/pikapkg/snowpack/) and its [default plugin](https://github.com/pikapkg/snowpack/blob/master/plugins/plugin-svelte) for `svelte`.
+This branch uses [vite](https://github.com/vitejs/vite) and [vite-plugin-svelte](https://github.com/intrnl/vite-plugin-svelte).
 
 # Tasks
 
 * `start` start the development server.
-* `build` creates a non-bundled production build.
-* `build:bundled` creates a bundled production build.
+* `build` creates a bundled production build.
 * `test` starts unit tests via `jest` in watch mode.
 * `test:ci` executes all unit tests in CI mode, i.e. without cache and including coverage.
 * `e2e` executes all E2E tests. Note that this requires the development server to be available as well, i.e. use the `start` task in a different terminal tab.
@@ -22,7 +21,7 @@ This branch uses [snowpack](https://github.com/pikapkg/snowpack/) and its [defau
 
 Note: The list below might not (yet) be exhaustive, it is mostly a list of already spotted aspects.
 
-- HMR with `snowpack` does not always work properly in conjunction with the routing mechanism. As a result, some components may not be displayed properly. At the moment, it is not entirely clear why this occurs. Also, styles defined in the `svelte` components are not always re-applied properly in case they change.
+- HMR works pretty well due to the specific plugin. The only exception to this are the translation files - if changed, they are properly reloaded, but that does not trigger a re-render of their actual usages. Might need additional configuration.
 
 - ESLint in `.svelte` files does not work in conjunction with TypeScript yet, since a preprocessor is required. See https://github.com/sveltejs/eslint-plugin-svelte3/pull/62<br>As such, `eslint-plugin-svelte3` will not be used for now.
 

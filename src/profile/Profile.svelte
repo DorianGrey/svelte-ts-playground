@@ -4,4 +4,4 @@
   export let id: string = "<unknown>";
 </script>
 
-<div>{$_('profile.message', { values: { id } })}</div>
+<div id="profile-message">{$_('profile.message', { values: { id } })}</div>

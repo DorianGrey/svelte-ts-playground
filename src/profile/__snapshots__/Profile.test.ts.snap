@@ -3,7 +3,9 @@
 exports[`Profile screen should render profile for no specific user 1`] = `
 <body>
   <div>
-    <div>
+    <div
+      id="profile-message"
+    >
       The profile page of user &lt;unknown&gt;
     </div>
   </div>
@@ -13,7 +15,9 @@ exports[`Profile screen should render profile for no specific user 1`] = `
 exports[`Profile screen should render profile for user with id 47 1`] = `
 <body>
   <div>
-    <div>
+    <div
+      id="profile-message"
+    >
       The profile page of user 47
     </div>
   </div>

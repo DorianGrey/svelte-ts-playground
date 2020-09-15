@@ -6,11 +6,11 @@
     "profile-answer": "Profil \"Der Antwort\""
   },
   "home": {
-      "edit": "Editiere",
-      "save": "und speichere zum neu laden.",
-      "message": "Lerne Svelte in Verbindung mit TypeScript"
+    "edit": "Editiere",
+    "save": "und speichere zum neu laden.",
+    "message": "Lerne Svelte in Verbindung mit TypeScript"
   },
   "profile": {
-      "message": "Das Profil von Benutzer {id}"
+    "message": "Das Profil von Benutzer {id}"
   }
 }

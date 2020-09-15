@@ -1,5 +1,5 @@
 module.exports = {
-  ...require("@snowpack/app-scripts-svelte/jest.config.js")(),
+  bail: false,
   collectCoverageFrom: [
     "src/**/*.{ts,svelte}",
     "!src/TailwindSetup.svelte",
@@ -8,8 +8,14 @@ module.exports = {
   coverageReporters: ["json", "lcov", "cobertura", "text"],
   coverageDirectory: "<rootDir>/test-results/coverage",
   coveragePathIgnorePatterns: ["/node_modules/", ".d.ts"],
+  moduleFileExtensions: ["js", "ts", "svelte"],
   reporters: ["default", "jest-junit"],
+  setupFilesAfterEnv: ["<rootDir>/jest.setup.js"],
   testEnvironment: "jsdom",
+  testMatch: [
+    "<rootDir>/src/**/__tests__/**/*.{js,jsx,ts,tsx}",
+    "<rootDir>/src/**/*.{spec,test}.{js,jsx,ts,tsx}",
+  ],
   testURL: "http://localhost",
   transform: {
     "^.+\\.svelte$": [
@@ -19,7 +25,9 @@ module.exports = {
       },
     ],
     "^.+\\.(js|ts)$":
-      "<rootDir>/node_modules/@snowpack/app-scripts-svelte/jest/babelTransform.js",
+      "<rootDir>/config/babelTransform.js",
   },
+  testPathIgnorePatterns: ["node_modules"],
   transformIgnorePatterns: ["[/\\\\]node_modules[/\\\\].+\\.(js|jsx|ts|tsx)$"],
+  verbose: true,
 };

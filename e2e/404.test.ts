@@ -1,7 +1,7 @@
 // TODO: For an unknown reason, `page` is still considered "any", thus autocomplete does not really work...
 describe("404/Not Found", () => {
   beforeAll(async () => {
-    await page.goto("http://localhost:8080/bananenbrotbaum");
+    await page.goto("http://localhost:3000/bananenbrotbaum");
   });
 
   it("should handle unknown routes with a creative story", async () => {

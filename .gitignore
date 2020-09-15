@@ -1,10 +1,7 @@
-# Build output
-.build
-build
-web_modules
-
-# Dependencies
 node_modules
+.DS_Store
+dist
+*.local
 
 # Test output
 test-results
